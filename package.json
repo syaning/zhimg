@@ -1,0 +1,32 @@
+{
+  "name": "zhimg",
+  "version": "1.0.0",
+  "description": "Image src util for zhihu images.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syaning/zhimg.git"
+  },
+  "keywords": [
+    "zhihu",
+    "image",
+    "zhimg",
+    "image-util"
+  ],
+  "author": {
+    "name": "Alex Sun",
+    "email": "syaningv@gmail.com",
+    "url": "syaning.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/syaning/zhimg/issues"
+  },
+  "homepage": "https://github.com/syaning/zhimg#readme",
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
+}
