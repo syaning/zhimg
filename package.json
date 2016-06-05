@@ -1,6 +1,6 @@
 {
   "name": "zhimg",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Image src util for zhihu images.",
   "main": "index.js",
   "scripts": {
