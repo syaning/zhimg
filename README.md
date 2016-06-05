@@ -41,6 +41,7 @@ zhimg('d38dd09765d51b5d163c555b081eea53_b.jpg').size('200x112')
 - `img.r`: raw image
 - `img.s`: small size, 25*25
 - `img.t`: 150*150
+- `img.xl`: 200*200
 - `img.size(size)`: custom size, e.g. `200x112`
 
 ### License

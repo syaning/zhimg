@@ -94,6 +94,16 @@ Image.prototype = {
   },
 
   /**
+   * 200*200.
+   *
+   * @return {String}
+   * @public
+   */
+  get xl() {
+    return imgSrc(this, 'xl')
+  },
+
+  /**
    * Get other size. For example: 200x112.
    *
    * @param  {String} size

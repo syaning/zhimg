@@ -51,6 +51,7 @@ describe('zhimg', function() {
     assert(img1.r === 'https://pic1.zhimg.com/d38dd09765d51b5d163c555b081eea53_r.jpg')
     assert(img2.s === 'http://pic.zhimg.com/d38dd09765d51b5d163c555b081eea53_s.jpg')
     assert(img3.t === 'https://pic.zhimg.com/d38dd09765d51b5d163c555b081eea53_t.jpg')
+    assert(img3.xl === 'https://pic.zhimg.com/d38dd09765d51b5d163c555b081eea53_xl.jpg')
   })
 
   it('img.size(size)', function() {
