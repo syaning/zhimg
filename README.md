@@ -32,7 +32,7 @@ zhimg('d38dd09765d51b5d163c555b081eea53_b.jpg').size('200x112')
 **Instance properties and methods:**
 
 - `img.src`: return the param `src`
-- `img.host`: return the host with default `zhimg.defaultHost`
+- `img.host`: return the host, with default value is `zhimg.defaultHost`
 - `img.hash`: a string with length 32
 - `img.ext`: image extension
 - `img.b`: often appears in answers
@@ -46,4 +46,4 @@ zhimg('d38dd09765d51b5d163c555b081eea53_b.jpg').size('200x112')
 
 ### License
 
-MIT
+[MIT](./LICENSE)
