@@ -40,7 +40,7 @@ Image.prototype = {
    * @public
    */
   get b() {
-    return imgSrc(this, 'b')
+    return this.size('b')
   },
 
   /**
@@ -50,7 +50,7 @@ Image.prototype = {
    * @public
    */
   get l() {
-    return imgSrc(this, 'l')
+    return this.size('l')
   },
 
   /**
@@ -60,7 +60,7 @@ Image.prototype = {
    * @public
    */
   get m() {
-    return imgSrc(this, 'm')
+    return this.size('m')
   },
 
   /**
@@ -70,7 +70,7 @@ Image.prototype = {
    * @public
    */
   get r() {
-    return imgSrc(this, 'r')
+    return this.size('r')
   },
 
   /**
@@ -80,7 +80,7 @@ Image.prototype = {
    * @public
    */
   get s() {
-    return imgSrc(this, 's')
+    return this.size('s')
   },
 
   /**
@@ -90,7 +90,7 @@ Image.prototype = {
    * @public
    */
   get t() {
-    return imgSrc(this, 't')
+    return this.size('t')
   },
 
   /**
@@ -100,7 +100,7 @@ Image.prototype = {
    * @public
    */
   get xl() {
-    return imgSrc(this, 'xl')
+    return this.size('xl')
   },
 
   /**
@@ -111,18 +111,6 @@ Image.prototype = {
    * @public
    */
   size: function(size) {
-    return imgSrc(this, size)
+    return `${this.host}${this.hash}_${size}.${this.ext}`
   }
-}
-
-/**
- * Return an image url of given `size`.
- *
- * @param  {Image} img
- * @param  {String} size
- * @return {String}
- * @private
- */
-function imgSrc(img, size) {
-  return `${img.host}${img.hash}_${size}.${img.ext}`
 }
