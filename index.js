@@ -104,6 +104,16 @@ Image.prototype = {
   },
 
   /**
+   * High definition.
+   *
+   * @return {String}
+   * @public
+   */
+  get hd() {
+    return this.size('hd')
+  },
+
+  /**
    * Get other size. For example: 200x112.
    *
    * @param  {String} size
