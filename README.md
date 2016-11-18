@@ -2,6 +2,9 @@
 
 Image src util for [zhihu](https://www.zhihu.com/) images.
 
+[![npm](https://img.shields.io/npm/v/zhimg.svg)](https://www.npmjs.com/package/zhimg)
+[![Travis](https://img.shields.io/travis/syaning/zhimg.svg)](https://travis-ci.org/syaning/zhimg)
+
 ### Install
 
 ```
