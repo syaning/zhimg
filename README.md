@@ -29,23 +29,22 @@ zhimg('d38dd09765d51b5d163c555b081eea53_b.jpg').size('200x112')
 ### API
 
 - `zhimg(src)`: return an `Image` instance
-- `zhimg.defaultHost`: `'https://pic.zhimg.com/'`
-- `zhimg.reg`: `/^(https?:\/\/pic\d?\.zhimg\.com\/)?([a-z0-9]{32})\w*\.(\w+)$/`
 
 **Instance properties and methods:**
 
-- `img.src`: return the param `src`
-- `img.host`: return the host, with default value is `zhimg.defaultHost`
+- `img.src`: return the parameter `src`
+- `img.host`: return the host, with default value is `'https://pic.zhimg.com/'`
+- `img.version`: the version, `''` or `'v2'`
 - `img.hash`: a string with length 32
 - `img.ext`: image extension
 - `img.b`: often appears in answers
-- `img.l`: large size, 100*100
-- `img.m`: medium size, 75*75
+- `img.l`: large size, 100x100
+- `img.m`: medium size, 75x75
 - `img.r`: raw image
-- `img.s`: small size, 25*25
-- `img.t`: 150*150
-- `img.xl`: 200*200
-- `img.hd`: high definition
+- `img.s`: small size, 25x25
+- `img.t`: 150x150
+- `img.xl`: 200x200
+- `img.hd`: high definition, the same as raw image
 - `img.size(size)`: custom size, e.g. `200x112`
 
 ### License

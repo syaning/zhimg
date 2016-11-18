@@ -12,14 +12,6 @@ var img3 = zhimg(src3)
 var img4 = zhimg(src4)
 
 describe('zhimg', function() {
-  it('zhimg.defaultHost is a string', function() {
-    assert(typeof zhimg.defaultHost === 'string')
-  })
-
-  it('zhimg.reg is a RegExp', function() {
-    assert(zhimg.reg instanceof RegExp)
-  })
-
   it('check param', function() {
     assert.throws(() => zhimg(123), /string/)
     assert.throws(() => zhimg('invalid src'), /invalid/)
@@ -35,7 +27,7 @@ describe('zhimg', function() {
   it('img.host', function() {
     assert.equal(img1.host, 'https://pic1.zhimg.com/')
     assert.equal(img2.host, 'http://pic.zhimg.com/')
-    assert.equal(img3.host, zhimg.defaultHost)
+    assert.equal(img3.host, 'https://pic.zhimg.com/')
     assert.equal(img4.host, 'https://pic4.zhimg.com/')
   })
 

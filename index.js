@@ -1,9 +1,7 @@
 const defaultHost = 'https://pic.zhimg.com/'
 const reg = /^(https?:\/\/pic\d?\.zhimg\.com\/)?(\w*-)?([a-z0-9]{32})\w*\.(\w+)$/
 
-exports = module.exports = Image
-exports.defaultHost = defaultHost
-exports.reg = reg
+module.exports = Image
 
 /**
  * Initialize `Image` with given `src`.
