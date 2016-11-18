@@ -4,7 +4,8 @@
   "description": "Image src util for zhihu images.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha test.js",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- test.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/syaning/zhimg#readme",
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "mocha": "^2.5.3"
   }
 }

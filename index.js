@@ -1,5 +1,5 @@
 const defaultHost = 'https://pic.zhimg.com/'
-const reg = /^(https?:\/\/pic\d?\.zhimg\.com\/)?([a-z0-9]{32})\w*\.(\w+)$/
+const reg = /^(https?:\/\/pic\d?\.zhimg\.com\/)?(\w*-)?([a-z0-9]{32})\w*\.(\w+)$/
 
 exports = module.exports = Image
 exports.defaultHost = defaultHost
@@ -28,8 +28,9 @@ function Image(src) {
 
   this.src = src
   this.host = ret[1] || defaultHost
-  this.hash = ret[2]
-  this.ext = ret[3]
+  this.version = ret[2] ? ret[2].slice(0, -1) : ''
+  this.hash = ret[3]
+  this.ext = ret[4]
 }
 
 Image.prototype = {
@@ -44,7 +45,7 @@ Image.prototype = {
   },
 
   /**
-   * Large size: 100*100.
+   * Large size: 100x100.
    *
    * @return {String}
    * @public
@@ -54,7 +55,7 @@ Image.prototype = {
   },
 
   /**
-   * Medium size: 75*75.
+   * Medium size: 75x75.
    *
    * @return {String}
    * @public
@@ -74,7 +75,7 @@ Image.prototype = {
   },
 
   /**
-   * Small size: 25*25.
+   * Small size: 25x25.
    *
    * @return {String}
    * @public
@@ -84,7 +85,7 @@ Image.prototype = {
   },
 
   /**
-   * 150*150.
+   * 150x150.
    *
    * @return {String}
    * @public
@@ -94,7 +95,7 @@ Image.prototype = {
   },
 
   /**
-   * 200*200.
+   * 200x200.
    *
    * @return {String}
    * @public
@@ -104,7 +105,7 @@ Image.prototype = {
   },
 
   /**
-   * High definition.
+   * High definition, the same as raw image.
    *
    * @return {String}
    * @public
@@ -121,6 +122,7 @@ Image.prototype = {
    * @public
    */
   size: function(size) {
-    return `${this.host}${this.hash}_${size}.${this.ext}`
+    var version = this.version ? this.version + '-' : ''
+    return `${this.host}${version}${this.hash}_${size}.${this.ext}`
   }
 }
